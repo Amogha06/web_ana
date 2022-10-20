@@ -61,6 +61,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 ]
             });
         });
+	    dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+dataLayer.push({
+  event: "purchase",
+  ecommerce: {
+      transaction_id: "T_12345",
+      affiliation: "Google Merchandise Store",
+      value: 25.42,
+      tax: 4.90,
+      shipping: 5.99,
+      currency: "USD",
+      items: [
+       {
+        item_id: "SKU_12345",
+        affiliation: "Google Merchandise Store",
+        location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+        price: 9.99,
+        quantity: 1
+	       }]
+  }
+});
+
 	    
 	    
     </script>
